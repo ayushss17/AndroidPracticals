@@ -28,7 +28,11 @@ fun calculateSplit(total: Double, count:Int): Double{
     return (total / count)
 }
 fun timeTaken(dist: Int, spd: Int):Int{
-    return ( dist / spd ) * 60 ;
+    var time = dist * spd
+    print( time )
+    time = time * 60
+    print ( time )
+    return time
 }
 fun main(){
 //    var amount:Int = 10000
@@ -74,5 +78,5 @@ fun main(){
     print("Enter speed: ")
     var spd:Int = readln().toInt()
 
-    print("Total time: ${timeTaken(dist, spd)} minutes")
+    print("Total time: ${((timeTaken(dist, spd)) * 60) } minutes")
 }
